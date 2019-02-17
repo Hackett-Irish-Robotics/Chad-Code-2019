@@ -26,6 +26,8 @@ import frc.robot.subsystems.ExampleSubsystem;
  */
 public class Robot extends TimedRobot {
   public static ExampleSubsystem m_subsystem = new ExampleSubsystem();
+
+
   // Adding the Drivetrain
   public static Drivetrain m_drivetrain = null;
   public static OI m_oi;
@@ -45,6 +47,8 @@ public class Robot extends TimedRobot {
 
     // Need to see with the camera.
     CameraServer.getInstance().startAutomaticCapture();
+
+    
     m_oi = new OI();
     m_chooser.setDefaultOption("Default Auto", new ExampleCommand());
     // chooser.addOption("My Auto", new MyAutoCommand());
