@@ -37,11 +37,18 @@ public class RobotMap {
   // Here is our Joystick for the Arcade drive.
   public static final int OI_DRIVER_CONTROLLER = 0;
 
+  // Here is our gamepad controller for button usage.
+  public static final int OI_GAMEPAD_CONTROLLER = 1;
+
   // Need to set our axis for move and rotate.
   // Check the settings for these.
   public static final int DRIVER_CONTROLLER_MOVE_AXIS = 1;
   public static final int DRIVER_CONTROLLER_ROTATE_AXIS = 2;
 
+  // Adding a constant for the solenoid.
+  public static final int HATCH_SOLENOID = 3;
 
+  // Adding a constant for our Hatch Compressor.
+  public static final int COMPRESSOR_ID = 6;
 
 }
