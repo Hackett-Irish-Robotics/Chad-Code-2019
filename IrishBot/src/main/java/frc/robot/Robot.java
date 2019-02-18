@@ -16,6 +16,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.subsystems.WinchSystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -27,6 +28,9 @@ import frc.robot.subsystems.ExampleSubsystem;
 public class Robot extends TimedRobot {
   public static ExampleSubsystem m_subsystem = new ExampleSubsystem();
 
+
+    // Adding our Hatch Winch
+    public static WinchSystem m_winch = null;
 
   // Adding the Drivetrain
   public static Drivetrain m_drivetrain = null;
@@ -44,6 +48,7 @@ public class Robot extends TimedRobot {
 
     // Initilaizing commands. Make sure these occur above OI.
     m_drivetrain = new Drivetrain();
+    m_winch = new WinchSystem();
 
     // Need to see with the camera.
     CameraServer.getInstance().startAutomaticCapture();
