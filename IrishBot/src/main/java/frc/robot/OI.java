@@ -60,13 +60,13 @@ public class OI {
 	  Button J8 = new JoystickButton(driverController, 8);
 	  Button J9 = new JoystickButton(driverController, 9);
     Button J10 = new JoystickButton(driverController, 10);
+  
+   // Here is our GamePad controller 
+   public Joystick gamepadController = new Joystick(RobotMap.OI_GAMEPAD_CONTROLLER); 
     
 
-  // Here is our GamePad controller once we are ready to add it.
-  //public Joystick gamepadController = new Joystick(RobotMap.OI_GAMEPAD_CONTROLLER);
-
-//    Button G1 = new JoystickButton(driverController, 1);
-//    Button G2 = new JoystickButton(driverController, 2);
+    Button G1 = new JoystickButton(driverController, 1);
+    Button G2 = new JoystickButton(driverController, 2);
 
 
 

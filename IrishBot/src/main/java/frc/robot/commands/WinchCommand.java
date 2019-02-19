@@ -27,12 +27,12 @@ public class WinchCommand extends Command {
   @Override
   protected void execute() {
 
-    // Using Joystick button 3 and 4 for now.
-    // We will work on adding the gamepad controller
-    // or perhaps another Joystick to control this.
-    if(Robot.m_oi.driverController.getRawButton(3)) {
+
+    // Here we use the gamepadController
+    // Button5 is up and Button6 is down
+    if(Robot.m_oi.gamepadController.getRawButton(5)) {
       Robot.m_winch.WinchUp();
-    } else if(Robot.m_oi.driverController.getRawButton(4)) {
+    } else if(Robot.m_oi.gamepadController.getRawButton(6)) {
       Robot.m_winch.WinchDown();
     } else {
       Robot.m_winch.WinchStop();
