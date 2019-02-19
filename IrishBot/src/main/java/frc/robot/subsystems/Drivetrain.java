@@ -18,9 +18,7 @@ import frc.robot.RobotMap;
 import frc.robot.commands.DriveArcade;
 
 
-/**
- * Add your docs here.
- */
+
 public class Drivetrain extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
@@ -28,30 +26,9 @@ public class Drivetrain extends Subsystem {
   // Here we are creating the Victor variables to
   // control the drive.
 
-  /* =========================================
-  SPECIAL NOTE: Let's check that we are using
-  Victors and not Victor SPs. 
-  We need to change these if they are
-  Victor S
-  Victor rightFrontVictor = null;
-  Victor rightBackVictor = null;
-  ============================================
-  */
-
-  // Should be able to use VictorSP instead of these.
- // Victor leftFrontVictor = null;
-  //Victor leftBackVictor = null;
-  //Victor rightFrontVictor = null;
-  //Victor rightBackVictor = null;
-
-  //VictorSP leftFrontVictor = null;
-  //VictorSP leftBackVictor = null;
-  //VictorSP rightFrontVictor = null;
-  //VictorSP rightBackVictor = null;
 
 
-
-  // Fur use with PWM if needed.
+  // PWM IDs
   PWMVictorSPX leftFrontVictorSPX = null;
   PWMVictorSPX leftBackVictorSPX = null;
   PWMVictorSPX rightFrontVictorSPX = null;
@@ -61,16 +38,9 @@ public class Drivetrain extends Subsystem {
   DifferentialDrive differentialDrive = null;
 
   public Drivetrain() {
-  // Here we are linking them to the RobotMap.java so we 
-  // can use the objects for each and link them to the IDs on
-  // the RoboRio.
 
-  //leftFrontVictor = new VictorSP(RobotMap.DRIVETRAIN_LEFT_FRONT_VICTOR);
-  //leftBackVictor = new VictorSP(RobotMap.DRIVETRAIN_LEFT_BACK_VICTOR);
-  //rightFrontVictor = new VictorSP(RobotMap.DRIVETRAIN_RIGHT_FRONT_VICTOR);
-  //rightBackVictor = new VictorSP(RobotMap.DRIVETRAIN_RIGHT_BACK_VICTOR);
 
-  // For use woth PWM if needed.
+  // PWM Objects
     leftFrontVictorSPX = new PWMVictorSPX(RobotMap.DRIVETRAIN_LEFT_FRONT_VICTOR);
     leftBackVictorSPX = new PWMVictorSPX(RobotMap.DRIVETRAIN_LEFT_BACK_VICTOR);
     rightFrontVictorSPX = new PWMVictorSPX(RobotMap.DRIVETRAIN_RIGHT_FRONT_VICTOR);
@@ -78,16 +48,10 @@ public class Drivetrain extends Subsystem {
 
   
   // Time to group up our motors so they can work together.
-  //SpeedControllerGroup leftMotors = new SpeedControllerGroup(leftFrontVictor, leftBackVictor);
-  //SpeedControllerGroup rightMotors = new SpeedControllerGroup(rightFrontVictor, rightBackVictor);
-
-  // For use with PWN if needed.
   SpeedControllerGroup leftMotorsSPX = new SpeedControllerGroup(leftFrontVictorSPX, leftBackVictorSPX);
   SpeedControllerGroup rightMotorsSPX = new SpeedControllerGroup(rightFrontVictorSPX, rightBackVictorSPX);
 
   //differentialDrive = new DifferentialDrive(leftMotors, rightMotors);
-
-  // For use with PWN if needed.
   differentialDrive = new DifferentialDrive(leftMotorsSPX, rightMotorsSPX);
 
   }

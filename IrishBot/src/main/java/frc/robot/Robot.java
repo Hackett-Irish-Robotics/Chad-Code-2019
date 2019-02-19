@@ -8,6 +8,8 @@
 package frc.robot;
 
 import edu.wpi.first.cameraserver.CameraServer;
+import edu.wpi.first.wpilibj.Compressor;
+//import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -16,7 +18,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.subsystems.HatchSystem;
 import frc.robot.subsystems.WinchSystem;
+
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -34,6 +38,20 @@ public class Robot extends TimedRobot {
 
   // Adding the Drivetrain
   public static Drivetrain m_drivetrain = null;
+
+  // Adding the compressor
+  public static Compressor m_compressor = null;
+
+  // Adding the Hatch System
+  public static HatchSystem m_hatchsystem = null;
+
+  /* ========TESTING==================
+  public static Solenoid m_solie = null;
+  ========TESTING================== */
+
+
+
+  // Input and Ouput
   public static OI m_oi;
 
   Command m_autonomousCommand;
@@ -46,14 +64,30 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
 
-    // Initilaizing commands. Make sure these occur above OI.
+    // Instantiating. Make sure these occur above OI.
     m_drivetrain = new Drivetrain();
     m_winch = new WinchSystem();
+
+    // Instantiate a compressor.
+    m_compressor = new Compressor(RobotMap.COMPRESSOR_ID);
+    m_compressor.setClosedLoopControl(true);
+
+
+  /* ========TESTING==================
+  m_solie = new Solenoid(RobotMap.HATCH_SOLENOID);
+  m_solie.set(true);
+  SmartDashboard.putString("Solenoid", "FIRED");
+  ========TESTING================== */
+
+
+
+    // Instantiate the Hatch System.
+    m_hatchsystem = new HatchSystem();
 
     // Need to see with the camera.
     CameraServer.getInstance().startAutomaticCapture();
 
-    
+
     m_oi = new OI();
     m_chooser.setDefaultOption("Default Auto", new ExampleCommand());
     // chooser.addOption("My Auto", new MyAutoCommand());
