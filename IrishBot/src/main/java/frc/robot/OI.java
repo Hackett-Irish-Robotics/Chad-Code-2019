@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.robot.commands.HatchCommand;
 
+
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
@@ -50,6 +51,7 @@ public class OI {
   // Here is our Joystick controller.
   public Joystick driverController = new Joystick(RobotMap.OI_DRIVER_CONTROLLER);
 
+
     Button J1 = new JoystickButton(driverController, 1);
 	  Button J2 = new JoystickButton(driverController, 2);
 	  Button J3 = new JoystickButton(driverController, 3);
@@ -75,5 +77,6 @@ public class OI {
       //J1.whenPressed(new HatchCommand());
 
     }
+
 
 }
