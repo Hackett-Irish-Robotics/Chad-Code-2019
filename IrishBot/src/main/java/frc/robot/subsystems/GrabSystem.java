@@ -7,40 +7,38 @@
 
 package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.Solenoid;
 import frc.robot.RobotMap;
-import frc.robot.commands.HatchCommand;
+import frc.robot.commands.GrabCommand;
+import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-public class HatchSystem extends Subsystem {
+/**
+ * Add your docs here.
+ */
+public class GrabSystem extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  Solenoid hatchSolenoid = new Solenoid(RobotMap.HATCH_SOLENOID);
-  
+  Solenoid grabSolenoid = new Solenoid(RobotMap.GRAB_SOLENOID);
 
 
-
-  public void hatchArmOut() {
-    hatchSolenoid.set(true);
-    SmartDashboard.putString("Solenoid", "true");
+  public void grabArmOut() {
+    grabSolenoid.set(true);
+    SmartDashboard.putString("Grabber", "true");
 
   }
   
-  public void hatchArmIn() {
-    hatchSolenoid.set(false);
-    SmartDashboard.putString("Solenoid", "false");
+  public void grabArmIn() {
+    grabSolenoid.set(false);
+    SmartDashboard.putString("Grabber", "false");
 
   }
-
-
 
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
-
-    setDefaultCommand(new HatchCommand());
+    setDefaultCommand(new GrabCommand());
   }
 }

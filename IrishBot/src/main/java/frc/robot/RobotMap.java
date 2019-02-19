@@ -55,5 +55,7 @@ public class RobotMap {
   // Here is our Hatch Winch. Set to ID5 for now. Check this on PWM.
   public static final int HATCH_WINCH_CONTROLLER = 5;
 
+  // Here is our Grab Arm. We need to set the ID for this yet.
+  public static final int GRAB_SOLENOID = 1;
 
 }
