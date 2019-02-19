@@ -32,7 +32,7 @@ public class HatchCommand extends Command {
     //TESTING
     //Robot.m_hatchsystem.hatchArmOut();
     if (Robot.m_oi.driverController.getRawButton(1)) {
-      Robot.m_hatchsystem.hatchArmIn();
+      Robot.m_hatchsystem.hatchArmOut();
     } else {
       Robot.m_hatchsystem.hatchArmIn();
     }

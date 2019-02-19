@@ -46,7 +46,7 @@ public class RobotMap {
   public static final int DRIVER_CONTROLLER_ROTATE_AXIS = 2;
 
   // Adding a constant for the solenoid.
-  public static final int HATCH_SOLENOID = 3;
+  public static final int HATCH_SOLENOID = 0;
 
   // Adding a constant for our Hatch Compressor.
   public static final int COMPRESSOR_ID = 6;

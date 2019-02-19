@@ -72,7 +72,7 @@ public class OI {
 
 
     public OI() {
-      J1.whenPressed(new HatchCommand());
+      //J1.whenPressed(new HatchCommand());
 
     }
 
