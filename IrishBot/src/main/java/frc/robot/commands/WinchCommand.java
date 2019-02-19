@@ -26,9 +26,9 @@ public class WinchCommand extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    if(Robot.m_oi.driverController.getRawButton(4)) {
+    if(Robot.m_oi.driverController.getRawButton(3)) {
       Robot.m_winch.WinchUp();
-    } else if(Robot.m_oi.driverController.getRawButton(5)) {
+    } else if(Robot.m_oi.driverController.getRawButton(4)) {
       Robot.m_winch.WinchDown();
     } else {
       Robot.m_winch.WinchStop();
