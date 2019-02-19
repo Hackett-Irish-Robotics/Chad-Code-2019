@@ -12,9 +12,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
 import frc.robot.commands.WinchCommand;
 
-/**
- * Add your docs here.
- */
+
 public class WinchSystem extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.

@@ -10,8 +10,6 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.PWMVictorSPX;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
-//import edu.wpi.first.wpilibj.Victor;
-//import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.RobotMap;
@@ -25,8 +23,6 @@ public class Drivetrain extends Subsystem {
 
   // Here we are creating the Victor variables to
   // control the drive.
-
-
 
   // PWM IDs
   PWMVictorSPX leftFrontVictorSPX = null;

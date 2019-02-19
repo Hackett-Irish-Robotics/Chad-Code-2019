@@ -44,10 +44,6 @@ public class HatchSystem extends Subsystem {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
 
-  //TESTING TESTING TESTING
-  // Try to extend it. 
-  //hatchSolenoid.set(true);
-
     setDefaultCommand(new HatchCommand());
   }
 }

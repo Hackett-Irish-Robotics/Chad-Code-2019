@@ -9,15 +9,12 @@ package frc.robot;
 
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.Compressor;
-//import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.Drivetrain;
-import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.HatchSystem;
 import frc.robot.subsystems.WinchSystem;
 
@@ -30,7 +27,7 @@ import frc.robot.subsystems.WinchSystem;
  * project.
  */
 public class Robot extends TimedRobot {
-  public static ExampleSubsystem m_subsystem = new ExampleSubsystem();
+
 
 
     // Adding our Hatch Winch
@@ -44,11 +41,6 @@ public class Robot extends TimedRobot {
 
   // Adding the Hatch System
   public static HatchSystem m_hatchsystem = null;
-
-  /* ========TESTING==================
-  public static Solenoid m_solie = null;
-  ========TESTING================== */
-
 
 
   // Input and Ouput
@@ -73,14 +65,6 @@ public class Robot extends TimedRobot {
     m_compressor.setClosedLoopControl(true);
 
 
-  /* ========TESTING==================
-  m_solie = new Solenoid(RobotMap.HATCH_SOLENOID);
-  m_solie.set(true);
-  SmartDashboard.putString("Solenoid", "FIRED");
-  ========TESTING================== */
-
-
-
     // Instantiate the Hatch System.
     m_hatchsystem = new HatchSystem();
 
@@ -89,7 +73,7 @@ public class Robot extends TimedRobot {
 
 
     m_oi = new OI();
-    m_chooser.setDefaultOption("Default Auto", new ExampleCommand());
+
     // chooser.addOption("My Auto", new MyAutoCommand());
     SmartDashboard.putData("Auto mode", m_chooser);
   }

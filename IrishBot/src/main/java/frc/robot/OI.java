@@ -11,8 +11,6 @@ package frc.robot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import frc.robot.commands.HatchCommand;
-
 
 /**
  * This class is the glue that binds the controls on the physical operator

@@ -21,16 +21,14 @@ public class HatchCommand extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    //TESTING
     Robot.m_hatchsystem.hatchArmIn();
-    //Robot.m_hatchsystem.hatchArmOut();
+
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    //TESTING
-    //Robot.m_hatchsystem.hatchArmOut();
+
     if (Robot.m_oi.driverController.getRawButton(1)) {
       Robot.m_hatchsystem.hatchArmOut();
     } else {
