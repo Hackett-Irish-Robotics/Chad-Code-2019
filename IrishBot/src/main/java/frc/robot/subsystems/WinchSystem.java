@@ -29,6 +29,7 @@ public class WinchSystem extends Subsystem {
 
   }
 
+  // We need to check the speed. This might be too fast.
   public void WinchUp() {
     TalonWinch.set(.7);
   }
