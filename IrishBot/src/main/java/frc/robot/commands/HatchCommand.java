@@ -28,7 +28,7 @@ public class HatchCommand extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-
+    // Get the Joystick trigger to extend the hatch.
     if (Robot.m_oi.driverController.getRawButton(1)) {
       Robot.m_hatchsystem.hatchArmOut();
     } else {

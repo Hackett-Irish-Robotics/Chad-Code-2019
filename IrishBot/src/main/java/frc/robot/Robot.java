@@ -33,21 +33,21 @@ public class Robot extends TimedRobot {
     // Adding our Hatch Winch
     public static WinchSystem m_winch = null;
 
-  // Adding the Drivetrain
-  public static Drivetrain m_drivetrain = null;
+    // Adding the Drivetrain
+    public static Drivetrain m_drivetrain = null;
 
-  // Adding the compressor
-  public static Compressor m_compressor = null;
+    // Adding the compressor
+    public static Compressor m_compressor = null;
 
-  // Adding the Hatch System
-  public static HatchSystem m_hatchsystem = null;
+    // Adding the Hatch System
+    public static HatchSystem m_hatchsystem = null;
 
 
-  // Input and Ouput
-  public static OI m_oi;
+    // Input and Ouput
+    public static OI m_oi;
 
-  Command m_autonomousCommand;
-  SendableChooser<Command> m_chooser = new SendableChooser<>();
+    Command m_autonomousCommand;
+    SendableChooser<Command> m_chooser = new SendableChooser<>();
 
   /**
    * This function is run when the robot is first started up and should be
@@ -69,6 +69,9 @@ public class Robot extends TimedRobot {
     m_hatchsystem = new HatchSystem();
 
     // Need to see with the camera.
+    // Discussions online note that there is no way
+    // to rotate it in Java. Might be able to
+    // change orientation in the driver station.
     CameraServer.getInstance().startAutomaticCapture();
 
 

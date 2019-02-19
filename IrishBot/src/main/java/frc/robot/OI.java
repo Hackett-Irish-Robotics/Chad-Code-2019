@@ -62,7 +62,7 @@ public class OI {
     Button J10 = new JoystickButton(driverController, 10);
     
 
-  // Here is our GamePad controller.
+  // Here is our GamePad controller once we are ready to add it.
   //public Joystick gamepadController = new Joystick(RobotMap.OI_GAMEPAD_CONTROLLER);
 
 //    Button G1 = new JoystickButton(driverController, 1);
@@ -70,7 +70,7 @@ public class OI {
 
 
 
-
+  // Not used right now, but keeping just in case.
     public OI() {
       //J1.whenPressed(new HatchCommand());
 

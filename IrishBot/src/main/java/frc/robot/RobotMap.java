@@ -52,7 +52,7 @@ public class RobotMap {
   // Adding a constant for our Hatch Compressor.
   public static final int COMPRESSOR_ID = 6;
 
-  // Here is our Hatch Winch. Set to ID5 for now.
+  // Here is our Hatch Winch. Set to ID5 for now. Check this on PWM.
   public static final int HATCH_WINCH_CONTROLLER = 5;
 
 

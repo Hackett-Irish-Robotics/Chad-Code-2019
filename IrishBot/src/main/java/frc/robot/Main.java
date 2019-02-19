@@ -22,6 +22,8 @@ public final class Main {
    * Main initialization function. Do not perform any initialization here.
    *
    */
+
+  // Calling Robot to run everything!
   public static void main(String... args) {
     RobotBase.startRobot(Robot::new);
   }
