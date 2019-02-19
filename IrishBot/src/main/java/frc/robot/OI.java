@@ -8,6 +8,8 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -46,6 +48,21 @@ public class OI {
   // Here is our Joystick controller.
   public Joystick driverController = new Joystick(RobotMap.OI_DRIVER_CONTROLLER);
 
+	Button J1 = new JoystickButton(driverController, 1);
+	Button J2 = new JoystickButton(driverController, 2);
+	Button J3 = new JoystickButton(driverController, 3);
+	Button J4 = new JoystickButton(driverController, 4);
+	Button J5 = new JoystickButton(driverController, 5);
+	Button J6 = new JoystickButton(driverController, 6);
+	Button J7 = new JoystickButton(driverController, 7);
+	Button J8 = new JoystickButton(driverController, 8);
+	Button J9 = new JoystickButton(driverController, 9);
+  Button J10 = new JoystickButton(driverController, 10);
+  
+  public OI(){
 
+
+
+  }
 
 }

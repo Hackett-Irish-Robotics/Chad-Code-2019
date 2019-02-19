@@ -42,6 +42,7 @@ public class RobotMap {
   public static final int DRIVER_CONTROLLER_MOVE_AXIS = 1;
   public static final int DRIVER_CONTROLLER_ROTATE_AXIS = 2;
 
-
+  // Here is our Hatch Winch
+  public static final int HATCH_WINCH_CONTROLLER = 6;
 
 }
