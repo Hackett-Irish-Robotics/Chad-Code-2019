@@ -13,9 +13,7 @@ import frc.robot.commands.GrabCommand;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-/**
- * Add your docs here.
- */
+
 public class GrabSystem extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.

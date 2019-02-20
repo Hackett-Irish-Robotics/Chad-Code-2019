@@ -8,6 +8,7 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Robot;
 
 public class WinchCommand extends Command {
@@ -32,8 +33,10 @@ public class WinchCommand extends Command {
     // Button5 is up and Button6 is down
     if(Robot.m_oi.gamepadController.getRawButton(5)) {
       Robot.m_winch.WinchUp();
+      SmartDashboard.putString("Winch", "Up");
     } else if(Robot.m_oi.gamepadController.getRawButton(6)) {
       Robot.m_winch.WinchDown();
+      SmartDashboard.putString("Winch", "Down");
     } else {
       Robot.m_winch.WinchStop();
     }

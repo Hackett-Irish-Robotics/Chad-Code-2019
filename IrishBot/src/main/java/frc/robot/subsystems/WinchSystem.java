@@ -7,6 +7,7 @@
 
 package frc.robot.subsystems;
 
+// The bot might be using a Victor instead. Make sure to check this.
 import edu.wpi.first.wpilibj.PWMTalonSRX;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
