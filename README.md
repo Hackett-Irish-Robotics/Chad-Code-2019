@@ -3,7 +3,7 @@
 
 Using this repository to add a module/system at a time for testing.
 
-**The master branch now includes all systems as of BagDay.
+**The master branch now includes all systems as of BagDay.**
 
 If you are adding a new system module or command, please create a branch for your work. 
 
