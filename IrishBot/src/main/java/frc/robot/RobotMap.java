@@ -33,7 +33,6 @@ public class RobotMap {
   public static final int DRIVETRAIN_RIGHT_FRONT_VICTOR = 3;
   public static final int DRIVETRAIN_RIGHT_BACK_VICTOR = 1;
 
-
   // Here is our Joystick for the Arcade drive.
   public static final int OI_DRIVER_CONTROLLER = 0;
 
@@ -45,15 +44,19 @@ public class RobotMap {
   public static final int DRIVER_CONTROLLER_MOVE_AXIS = 1;
   public static final int DRIVER_CONTROLLER_ROTATE_AXIS = 2;
 
-
   // Adding a constant for the solenoid.
-  public static final int HATCH_SOLENOID = 0;
-
+  public static final int HATCH_SOLENOID_OUT = 1;
+  public static final int HATCH_SOLENOID_IN = 2;
+  
   // Adding a constant for our Hatch Compressor.
   public static final int COMPRESSOR_ID = 6;
 
   // Here is our Hatch Winch. Set to ID5 for now. Check this on PWM.
   public static final int HATCH_WINCH_CONTROLLER = 5;
+
+  // Here is our Grab Arm. We need to set the ID for this yet.
+  public static final int GRAB_SOLENOID = 0;
+
 
 
 }

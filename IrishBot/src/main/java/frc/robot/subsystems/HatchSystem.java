@@ -8,33 +8,40 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
-import edu.wpi.first.wpilibj.Solenoid;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
+//import edu.wpi.first.wpilibj.Solenoid;
+//import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 import frc.robot.RobotMap;
 import frc.robot.commands.HatchCommand;
-
-
-// For testing
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class HatchSystem extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  Solenoid hatchSolenoid = new Solenoid(RobotMap.HATCH_SOLENOID);
+  // We replaced the Solenoid with a DoubleSolenoid for more power.
+  DoubleSolenoid  doubleHatchSolenoid = new DoubleSolenoid(RobotMap.HATCH_SOLENOID_OUT, RobotMap.HATCH_SOLENOID_IN);
+  //Solenoid hatchSolenoid = new Solenoid(RobotMap.HATCH_SOLENOID);
   
-
-
-
+  // Put the hatch arm out.
   public void hatchArmOut() {
-    hatchSolenoid.set(true);
+    //hatchSolenoid.set(true);
+    doubleHatchSolenoid.set(DoubleSolenoid.Value.kForward);
     SmartDashboard.putString("Solenoid", "true");
 
   }
   
+  // Pull the hatch arm back in.
   public void hatchArmIn() {
-    hatchSolenoid.set(false);
+    doubleHatchSolenoid.set(DoubleSolenoid.Value.kReverse);
+    //hatchSolenoid.set(false);
     SmartDashboard.putString("Solenoid", "false");
 
+  }
+
+  // Turn off the hatch system.
+  public void hatchOff() {
+    doubleHatchSolenoid.set(DoubleSolenoid.Value.kOff);
   }
 
 

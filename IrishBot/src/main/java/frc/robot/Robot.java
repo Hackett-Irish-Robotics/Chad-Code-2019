@@ -15,8 +15,10 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.subsystems.Drivetrain;
+import frc.robot.subsystems.GrabSystem;
 import frc.robot.subsystems.HatchSystem;
 import frc.robot.subsystems.WinchSystem;
+
 
 
 /**
@@ -27,8 +29,6 @@ import frc.robot.subsystems.WinchSystem;
  * project.
  */
 public class Robot extends TimedRobot {
-
-
 
     // Adding our Hatch Winch
     public static WinchSystem m_winch = null;
@@ -42,6 +42,8 @@ public class Robot extends TimedRobot {
     // Adding the Hatch System
     public static HatchSystem m_hatchsystem = null;
 
+    // Adding the Grab System
+    public static GrabSystem m_grabsystem = null;
 
     // Input and Ouput
     public static OI m_oi;
@@ -57,16 +59,21 @@ public class Robot extends TimedRobot {
   public void robotInit() {
 
     // Instantiating. Make sure these occur above OI.
+    // Instantiate the Drive system.
     m_drivetrain = new Drivetrain();
+
+    // Instantiate the Winch system.
     m_winch = new WinchSystem();
 
     // Instantiate a compressor.
     m_compressor = new Compressor(RobotMap.COMPRESSOR_ID);
     m_compressor.setClosedLoopControl(true);
 
-
     // Instantiate the Hatch System.
     m_hatchsystem = new HatchSystem();
+
+    // Instantiate the Grab System
+    m_grabsystem = new GrabSystem();
 
     // Need to see with the camera.
     // Discussions online note that there is no way
@@ -74,7 +81,7 @@ public class Robot extends TimedRobot {
     // change orientation in the driver station.
     CameraServer.getInstance().startAutomaticCapture();
 
-
+    // Instantiate our input/output.
     m_oi = new OI();
 
     // chooser.addOption("My Auto", new MyAutoCommand());

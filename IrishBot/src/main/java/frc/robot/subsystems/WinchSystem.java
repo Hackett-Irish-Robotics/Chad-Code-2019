@@ -7,6 +7,11 @@
 
 package frc.robot.subsystems;
 
+// The bot might be using a Victor instead. Make sure to check this.
+// It is using a Victor, but this Talon code works since we
+// are just moving the motor backwards and forwards.
+// If we need to adjust the motor, we might want to change
+// the motor object as well.
 import edu.wpi.first.wpilibj.PWMTalonSRX;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;

@@ -7,7 +7,6 @@
 
 package frc.robot;
 
-
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -49,7 +48,7 @@ public class OI {
   // Here is our Joystick controller.
   public Joystick driverController = new Joystick(RobotMap.OI_DRIVER_CONTROLLER);
 
-
+    /*
     Button J1 = new JoystickButton(driverController, 1);
 	  Button J2 = new JoystickButton(driverController, 2);
 	  Button J3 = new JoystickButton(driverController, 3);
@@ -60,13 +59,14 @@ public class OI {
 	  Button J8 = new JoystickButton(driverController, 8);
 	  Button J9 = new JoystickButton(driverController, 9);
     Button J10 = new JoystickButton(driverController, 10);
+  */
+  
+   // Here is our GamePad controller 
+   public Joystick gamepadController = new Joystick(RobotMap.OI_GAMEPAD_CONTROLLER); 
     
 
-  // Here is our GamePad controller once we are ready to add it.
-  //public Joystick gamepadController = new Joystick(RobotMap.OI_GAMEPAD_CONTROLLER);
-
-//    Button G1 = new JoystickButton(driverController, 1);
-//    Button G2 = new JoystickButton(driverController, 2);
+    //Button G1 = new JoystickButton(driverController, 1);
+    //Button G2 = new JoystickButton(driverController, 2);
 
 
 
