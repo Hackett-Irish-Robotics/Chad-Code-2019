@@ -20,6 +20,7 @@ public class GrabCommand extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
+    // Make sure we have the grabber in when we start.
     Robot.m_grabsystem.grabArmIn();
   }
 
@@ -29,9 +30,9 @@ public class GrabCommand extends Command {
         // Get the Joystick trigger to extend the grabber.
         // Set it to Button2 (thumb)
         if (Robot.m_oi.driverController.getRawButton(2)) {
-          Robot.m_grabsystem.grabArmOut();
+            Robot.m_grabsystem.grabArmOut();
         } else {
-          Robot.m_grabsystem.grabArmIn();
+            Robot.m_grabsystem.grabArmIn();
         }
   }
 
@@ -44,7 +45,7 @@ public class GrabCommand extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-        // might not need
+        // Might not need, but keep just in case.
         Robot.m_grabsystem.grabArmIn();
   }
 

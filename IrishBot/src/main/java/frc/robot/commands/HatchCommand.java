@@ -30,20 +30,14 @@ public class HatchCommand extends Command {
   protected void execute() {
     // Get the Joystick trigger to extend the hatch.
     if (Robot.m_oi.driverController.getRawButton(3)) {
-      Robot.m_hatchsystem.hatchArmOut();
+        Robot.m_hatchsystem.hatchArmOut();
     } else if(Robot.m_oi.driverController.getRawButton(4)) {
-      Robot.m_hatchsystem.hatchArmIn();
+        Robot.m_hatchsystem.hatchArmIn();
     } else {
-      Robot.m_hatchsystem.hatchOff();
+        Robot.m_hatchsystem.hatchOff();
     }
 
     }
-
-  
-    
-
-
-  
 
   // Make this return true when this Command no longer needs to run execute()
   @Override

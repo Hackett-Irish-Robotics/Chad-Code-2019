@@ -32,13 +32,14 @@ public class WinchCommand extends Command {
     // Here we use the gamepadController
     // Button5 is up and Button6 is down
     if(Robot.m_oi.gamepadController.getRawButton(5)) {
-      Robot.m_winch.WinchUp();
-      SmartDashboard.putString("Winch", "Up");
+        Robot.m_winch.WinchUp();
+        SmartDashboard.putString("Winch", "Up");
     } else if(Robot.m_oi.gamepadController.getRawButton(6)) {
-      Robot.m_winch.WinchDown();
-      SmartDashboard.putString("Winch", "Down");
+        Robot.m_winch.WinchDown();
+        SmartDashboard.putString("Winch", "Down");
     } else {
-      Robot.m_winch.WinchStop();
+        // Stop the winch!
+        Robot.m_winch.WinchStop();
     }
 
   }
@@ -49,7 +50,8 @@ public class WinchCommand extends Command {
     return false;
   }
 
-  // Called once after isFinished returns true
+  // Called once after isFinished returns true.
+  // We want to make sure we stop the winch here.
   @Override
   protected void end() {
     Robot.m_winch.WinchStop();

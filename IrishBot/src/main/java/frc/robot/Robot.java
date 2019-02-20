@@ -30,8 +30,6 @@ import frc.robot.subsystems.WinchSystem;
  */
 public class Robot extends TimedRobot {
 
-
-
     // Adding our Hatch Winch
     public static WinchSystem m_winch = null;
 
@@ -47,7 +45,6 @@ public class Robot extends TimedRobot {
     // Adding the Grab System
     public static GrabSystem m_grabsystem = null;
 
-
     // Input and Ouput
     public static OI m_oi;
 
@@ -62,13 +59,15 @@ public class Robot extends TimedRobot {
   public void robotInit() {
 
     // Instantiating. Make sure these occur above OI.
+    // Instantiate the Drive system.
     m_drivetrain = new Drivetrain();
+
+    // Instantiate the Winch system.
     m_winch = new WinchSystem();
 
     // Instantiate a compressor.
     m_compressor = new Compressor(RobotMap.COMPRESSOR_ID);
     m_compressor.setClosedLoopControl(true);
-
 
     // Instantiate the Hatch System.
     m_hatchsystem = new HatchSystem();
@@ -82,7 +81,7 @@ public class Robot extends TimedRobot {
     // change orientation in the driver station.
     CameraServer.getInstance().startAutomaticCapture();
 
-
+    // Instantiate our input/output.
     m_oi = new OI();
 
     // chooser.addOption("My Auto", new MyAutoCommand());

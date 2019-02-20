@@ -19,12 +19,11 @@ public class HatchSystem extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
+  // We replaced the Solenoid with a DoubleSolenoid for more power.
   DoubleSolenoid  doubleHatchSolenoid = new DoubleSolenoid(RobotMap.HATCH_SOLENOID_OUT, RobotMap.HATCH_SOLENOID_IN);
   //Solenoid hatchSolenoid = new Solenoid(RobotMap.HATCH_SOLENOID);
   
-
-
-
+  // Put the hatch arm out.
   public void hatchArmOut() {
     //hatchSolenoid.set(true);
     doubleHatchSolenoid.set(DoubleSolenoid.Value.kForward);
@@ -32,6 +31,7 @@ public class HatchSystem extends Subsystem {
 
   }
   
+  // Pull the hatch arm back in.
   public void hatchArmIn() {
     doubleHatchSolenoid.set(DoubleSolenoid.Value.kReverse);
     //hatchSolenoid.set(false);
@@ -39,6 +39,7 @@ public class HatchSystem extends Subsystem {
 
   }
 
+  // Turn off the hatch system.
   public void hatchOff() {
     doubleHatchSolenoid.set(DoubleSolenoid.Value.kOff);
   }
