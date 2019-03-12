@@ -29,7 +29,7 @@ public class CargoCommand extends Command {
   protected void execute() {
 
     // Here we use the gamepadController
-    // Button7 is up and Button8 is down
+    // Button4 is up and Button1 is down
     if(Robot.m_oi.gamepadController.getRawButton(4)) {
       Robot.m_cargosystem.CargoUp();
       SmartDashboard.putString("Cargo", "Up");
