@@ -29,7 +29,7 @@ public class GrabCommand extends Command {
   protected void execute() {
         // Get the Joystick trigger to extend the grabber.
         // Set it to Button2 (thumb)
-        if (Robot.m_oi.driverController.getRawButton(2)) {
+        if (Robot.m_oi.driverController.getRawButton(1)) {
             Robot.m_grabsystem.grabArmOut();
         } else {
             Robot.m_grabsystem.grabArmIn();

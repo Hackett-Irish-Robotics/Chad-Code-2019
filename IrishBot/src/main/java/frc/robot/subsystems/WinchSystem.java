@@ -12,7 +12,10 @@ package frc.robot.subsystems;
 // are just moving the motor backwards and forwards.
 // If we need to adjust the motor, we might want to change
 // the motor object as well.
-import edu.wpi.first.wpilibj.PWMTalonSRX;
+
+//import edu.wpi.first.wpilibj.PWMTalonSRX;
+
+import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
 import frc.robot.commands.WinchCommand;
@@ -21,28 +24,37 @@ import frc.robot.commands.WinchCommand;
 public class WinchSystem extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
-  PWMTalonSRX TalonWinch = null;
+  
+  //PWMTalonSRX TalonWinch = null;
+
+  Spark SparkWinch = null;
 
   // Trying the PWM version of the Talon
   // However, we might need to use a different controller.
   public WinchSystem() {
 
-    TalonWinch = new PWMTalonSRX(RobotMap.HATCH_WINCH_CONTROLLER);
-    TalonWinch.enableDeadbandElimination(true);
+    //TalonWinch = new PWMTalonSRX(RobotMap.HATCH_WINCH_CONTROLLER);
+    //TalonWinch.enableDeadbandElimination(true);
 
+    SparkWinch = new Spark(RobotMap.HATCH_WINCH_CONTROLLER);
+    SparkWinch.enableDeadbandElimination(true);
+    
   }
 
   // We need to check the speed. This might be too fast.
   public void WinchUp() {
-    TalonWinch.set(.7);
+    //TalonWinch.set(.7);
+    SparkWinch.set(.7);
   }
 
   public void WinchDown() {
-    TalonWinch.set(-.7);
+    //TalonWinch.set(-.7);
+    SparkWinch.set(-.7);
   }
 
   public void WinchStop() {
-    TalonWinch.stopMotor();
+    //TalonWinch.stopMotor();
+    SparkWinch.stopMotor();
   }
 
   @Override
