@@ -14,6 +14,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.subsystems.CargoSystem;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.GrabSystem;
 import frc.robot.subsystems.HatchSystem;
@@ -45,6 +46,9 @@ public class Robot extends TimedRobot {
     // Adding the Grab System
     public static GrabSystem m_grabsystem = null;
 
+    // Adding the Cargo System
+    public static CargoSystem m_cargosystem = null;
+
     // Input and Ouput
     public static OI m_oi;
 
@@ -74,6 +78,9 @@ public class Robot extends TimedRobot {
 
     // Instantiate the Grab System
     m_grabsystem = new GrabSystem();
+
+    // Instantiate the Cargo System
+    m_cargosystem = new CargoSystem();
 
     // Need to see with the camera.
     // Discussions online note that there is no way
