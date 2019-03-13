@@ -35,14 +35,29 @@ public class IntakeSystem extends Subsystem {
     /// if necessary.
     public void IntakeIn() {
       IntakeMotors.set(1);
+      /*
+      LeftRoller.set(1);
+      RightRoller.set(1);
+      */
     }
   
     public void IntakeOut() {
       IntakeMotors.set(-1);
+
+      /*
+      LeftRoller.set(-1);
+      RightRoller.set(-1);
+      */
+
     }
   
     public void IntakeStop() {
       IntakeMotors.stopMotor();
+
+      /*
+      LeftRoller.stopMotor();
+      RightRoller.stopMotor();
+      */
     }
   
 
