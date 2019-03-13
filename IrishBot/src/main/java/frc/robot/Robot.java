@@ -18,7 +18,7 @@ import frc.robot.subsystems.CargoSystem;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.GrabSystem;
 import frc.robot.subsystems.HatchSystem;
-import frc.robot.subsystems.IntakeSystem;
+//import frc.robot.subsystems.IntakeSystem;
 import frc.robot.subsystems.WinchSystem;
 
 
@@ -50,7 +50,7 @@ public class Robot extends TimedRobot {
     // Adding the Cargo System
     public static CargoSystem m_cargosystem = null;
 
-    public static IntakeSystem m_intakesystem = null;
+    //public static IntakeSystem m_intakesystem = null;
 
     // Input and Ouput
     public static OI m_oi;
@@ -86,7 +86,7 @@ public class Robot extends TimedRobot {
     m_cargosystem = new CargoSystem();
 
     // Instantiate the Intake System
-    m_intakesystem = new IntakeSystem();
+    //m_intakesystem = new IntakeSystem();
 
     // Need to see with the camera.
     // Discussions online note that there is no way

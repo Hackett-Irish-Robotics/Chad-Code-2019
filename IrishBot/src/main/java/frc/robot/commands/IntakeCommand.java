@@ -15,13 +15,13 @@ public class IntakeCommand extends Command {
   public IntakeCommand() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
-    requires(Robot.m_intakesystem);
+   // requires(Robot.m_intakesystem);
   }
 
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    Robot.m_intakesystem.IntakeStop();
+    //Robot.m_intakesystem.IntakeStop();
   }
 
   // Called repeatedly when this Command is scheduled to run
@@ -29,6 +29,8 @@ public class IntakeCommand extends Command {
   protected void execute() {
     // Here we use the gamepadController
     // Button2 is IN and Button3 is OUT
+    
+    /*
     if(Robot.m_oi.gamepadController.getRawButton(2)) {
       Robot.m_intakesystem.IntakeIn();
       SmartDashboard.putString("Intake", "In");
@@ -39,7 +41,7 @@ public class IntakeCommand extends Command {
       // Stop the Intake!
       Robot.m_intakesystem.IntakeStop();
   }
-
+*/
 
 
   }
@@ -53,7 +55,7 @@ public class IntakeCommand extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    Robot.m_intakesystem.IntakeStop();
+   // Robot.m_intakesystem.IntakeStop();
   }
 
   // Called when another command which requires one or more of the same
