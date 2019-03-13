@@ -48,8 +48,8 @@ public class Drivetrain extends Subsystem {
   SpeedControllerGroup rightMotorsSPX = new SpeedControllerGroup(rightFrontVictorSPX, rightBackVictorSPX);
 
   // Attempt to slow motors down.
-  leftMotorsSPX.set(0.5);
-  rightMotorsSPX.set(0.5);
+  //leftMotorsSPX.set(0.5);
+  //rightMotorsSPX.set(0.5);
 
   //differentialDrive = new DifferentialDrive(leftMotors, rightMotors);
   differentialDrive = new DifferentialDrive(leftMotorsSPX, rightMotorsSPX);
