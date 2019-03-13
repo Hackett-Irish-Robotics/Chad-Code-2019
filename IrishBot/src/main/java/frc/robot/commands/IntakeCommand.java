@@ -21,7 +21,7 @@ public class IntakeCommand extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    Robot.m_intakesystem.IntakeOut();
+    Robot.m_intakesystem.IntakeStop();
   }
 
   // Called repeatedly when this Command is scheduled to run

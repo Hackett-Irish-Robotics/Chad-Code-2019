@@ -32,7 +32,11 @@ public class IntakeSystem extends Subsystem {
   }
 
     // Cargo in and Cargo Out. Test these and reverse
-    /// if necessary.
+    // if necessary.
+
+    // If the Speed Controller group does not work,
+    // we can control the motors independently.
+    
     public void IntakeIn() {
       IntakeMotors.set(1);
       /*
