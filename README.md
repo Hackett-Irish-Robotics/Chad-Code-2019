@@ -1,9 +1,8 @@
 # chadbot
 ## ChadBot Modules
+## Gull Lake Code
 
-Using this repository to add a module/system at a time for testing.
-
-**The master branch now includes all systems moving toward Gull Lake.**
+**Use the gull-lake branch for all code in the compeition. We can then review changes after and commit to master.**
 
 If you are adding a new system module or command, please create a branch for your work. 
 
