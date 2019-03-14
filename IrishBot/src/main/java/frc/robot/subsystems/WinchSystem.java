@@ -7,6 +7,8 @@
 
 package frc.robot.subsystems;
 
+
+
 // The bot might be using a Victor instead. Make sure to check this.
 // It is using a Victor, but this Talon code works since we
 // are just moving the motor backwards and forwards.
@@ -14,8 +16,9 @@ package frc.robot.subsystems;
 // the motor object as well.
 
 //import edu.wpi.first.wpilibj.PWMTalonSRX;
+import edu.wpi.first.wpilibj.PWMVictorSPX;
 
-import edu.wpi.first.wpilibj.Spark;
+//import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
 import frc.robot.commands.WinchCommand;
@@ -26,8 +29,8 @@ public class WinchSystem extends Subsystem {
   // here. Call these from Commands.
   
   //PWMTalonSRX TalonWinch = null;
-
-  Spark SparkWinch = null;
+  //Spark SparkWinch = null;
+  PWMVictorSPX VictorWinch = null;
 
   // Trying the PWM version of the Talon
   // However, we might need to use a different controller.
@@ -36,25 +39,31 @@ public class WinchSystem extends Subsystem {
     //TalonWinch = new PWMTalonSRX(RobotMap.HATCH_WINCH_CONTROLLER);
     //TalonWinch.enableDeadbandElimination(true);
 
-    SparkWinch = new Spark(RobotMap.HATCH_WINCH_CONTROLLER);
+    //SparkWinch = new Spark(RobotMap.HATCH_WINCH_CONTROLLER);
     //SparkWinch.enableDeadbandElimination(true);
+
+    VictorWinch = new PWMVictorSPX(RobotMap.HATCH_WINCH_CONTROLLER);
+    VictorWinch.enableDeadbandElimination(true);
     
   }
 
   // We need to check the speed. This might be too fast.
   public void WinchUp() {
     //TalonWinch.set(.7);
-    SparkWinch.set(1);
+    //SparkWinch.set(0.75);
+    VictorWinch.set(.7);
   }
 
   public void WinchDown() {
     //TalonWinch.set(-.7);
-    SparkWinch.set(-1);
+    //SparkWinch.set(-0.75);
+    VictorWinch.set(-.7);
   }
 
   public void WinchStop() {
     //TalonWinch.stopMotor();
-    SparkWinch.stopMotor();
+    //SparkWinch.stopMotor();
+    VictorWinch.stopMotor();
   }
 
 
