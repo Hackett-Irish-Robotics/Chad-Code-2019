@@ -14,9 +14,11 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.subsystems.CargoSystem;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.GrabSystem;
 import frc.robot.subsystems.HatchSystem;
+//import frc.robot.subsystems.IntakeSystem;
 import frc.robot.subsystems.WinchSystem;
 
 
@@ -44,6 +46,13 @@ public class Robot extends TimedRobot {
 
     // Adding the Grab System
     public static GrabSystem m_grabsystem = null;
+
+    // Adding the Cargo System
+    public static CargoSystem m_cargosystem = null;
+
+    // If we decide to add the rollers later,
+    // we have the system and command code ready.
+    //public static IntakeSystem m_intakesystem = null;
 
     // Input and Ouput
     public static OI m_oi;
@@ -75,10 +84,17 @@ public class Robot extends TimedRobot {
     // Instantiate the Grab System
     m_grabsystem = new GrabSystem();
 
+    // Instantiate the Cargo System
+    m_cargosystem = new CargoSystem();
+
+    // Instantiate the Intake System in Needed
+    //m_intakesystem = new IntakeSystem();
+
     // Need to see with the camera.
     // Discussions online note that there is no way
     // to rotate it in Java. Might be able to
     // change orientation in the driver station.
+    // Must be rotated at driver station.
     CameraServer.getInstance().startAutomaticCapture();
 
     // Instantiate our input/output.

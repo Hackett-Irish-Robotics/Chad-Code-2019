@@ -8,32 +8,42 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
-import frc.robot.Robot;
+//import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+//import frc.robot.Robot;
 
-public class GrabCommand extends Command {
-  public GrabCommand() {
+public class IntakeCommand extends Command {
+  public IntakeCommand() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
-    requires(Robot.m_grabsystem);
+   // requires(Robot.m_intakesystem);
   }
 
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
-    // Make sure we have the grabber in when we start.
-    Robot.m_grabsystem.grabArmIn();
+    //Robot.m_intakesystem.IntakeStop();
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-        // Get the Joystick trigger to extend the grabber.
-        // Set it to Button2 (thumb)
-        if (Robot.m_oi.driverController.getRawButton(1)) {
-            Robot.m_grabsystem.grabArmOut();
-        } else {
-            Robot.m_grabsystem.grabArmIn();
-        }
+    // Here we use the gamepadController
+    // Button2 is IN and Button3 is OUT
+    
+    /*
+    if(Robot.m_oi.gamepadController.getRawButton(2)) {
+      Robot.m_intakesystem.IntakeIn();
+      SmartDashboard.putString("Intake", "In");
+  } else if(Robot.m_oi.gamepadController.getRawButton(1)) {
+      Robot.m_intakesystem.IntakeOut();
+      SmartDashboard.putString("Intake", "Out");
+  } else {
+      // Stop the Intake!
+      Robot.m_intakesystem.IntakeStop();
+  }
+*/
+
+
   }
 
   // Make this return true when this Command no longer needs to run execute()
@@ -45,8 +55,7 @@ public class GrabCommand extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-        // Might not need, but keep just in case.
-        Robot.m_grabsystem.grabArmIn();
+   // Robot.m_intakesystem.IntakeStop();
   }
 
   // Called when another command which requires one or more of the same
