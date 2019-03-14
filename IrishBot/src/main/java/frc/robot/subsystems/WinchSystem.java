@@ -37,25 +37,26 @@ public class WinchSystem extends Subsystem {
     //TalonWinch.enableDeadbandElimination(true);
 
     SparkWinch = new Spark(RobotMap.HATCH_WINCH_CONTROLLER);
-    SparkWinch.enableDeadbandElimination(true);
+    //SparkWinch.enableDeadbandElimination(true);
     
   }
 
   // We need to check the speed. This might be too fast.
   public void WinchUp() {
     //TalonWinch.set(.7);
-    SparkWinch.set(.7);
+    SparkWinch.set(1);
   }
 
   public void WinchDown() {
     //TalonWinch.set(-.7);
-    SparkWinch.set(-.7);
+    SparkWinch.set(-1);
   }
 
   public void WinchStop() {
     //TalonWinch.stopMotor();
     SparkWinch.stopMotor();
   }
+
 
   @Override
   public void initDefaultCommand() {
