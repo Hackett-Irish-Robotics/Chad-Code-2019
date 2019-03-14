@@ -25,6 +25,8 @@ public class CargoSystem extends Subsystem {
   }
 
   // We need to check the speed. 
+  // Ran at .7 in testing. Might be able
+  // to set to full speed (1, -1)
   public void CargoUp() {
     CargoWinch.set(.7);
   }

@@ -50,6 +50,8 @@ public class Robot extends TimedRobot {
     // Adding the Cargo System
     public static CargoSystem m_cargosystem = null;
 
+    // If we decide to add the rollers later,
+    // we have the system and command code ready.
     //public static IntakeSystem m_intakesystem = null;
 
     // Input and Ouput
@@ -85,13 +87,14 @@ public class Robot extends TimedRobot {
     // Instantiate the Cargo System
     m_cargosystem = new CargoSystem();
 
-    // Instantiate the Intake System
+    // Instantiate the Intake System in Needed
     //m_intakesystem = new IntakeSystem();
 
     // Need to see with the camera.
     // Discussions online note that there is no way
     // to rotate it in Java. Might be able to
     // change orientation in the driver station.
+    // Must be rotated at driver station.
     CameraServer.getInstance().startAutomaticCapture();
 
     // Instantiate our input/output.

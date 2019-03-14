@@ -30,6 +30,11 @@ public class CargoCommand extends Command {
 
     // Here we use the gamepadController
     // Button4 is up and Button1 is down
+    // Keep the cargo system button grouped.
+    // The current buttons are set with the Intake System
+    // in mind. If we don't use intake, we could also
+    // use buttons 2 and 3 in the controller
+    // grouping.
     if(Robot.m_oi.gamepadController.getRawButton(4)) {
       Robot.m_cargosystem.CargoUp();
       SmartDashboard.putString("Cargo", "Up");

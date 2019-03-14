@@ -59,9 +59,9 @@ public class RobotMap {
   // Here is our Cargo Winch. We can check the ID later.
   public static final int CARGO_WINCH_CONTROLLER = 6;
 
-  // Intake System rollers.
-  public static final int INTAKE_ROLLER_LEFT = 7;
-  public static final int INTAKE_ROLLER_RIGHT = 8;
+  // Intake System rollers if needed.
+  //public static final int INTAKE_ROLLER_LEFT = 7;
+  //public static final int INTAKE_ROLLER_RIGHT = 8;
 
   // Here is our Grab Arm. We have this at zero.
   public static final int GRAB_SOLENOID = 0;
