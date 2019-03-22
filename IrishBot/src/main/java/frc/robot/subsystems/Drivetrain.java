@@ -59,7 +59,7 @@ public class Drivetrain extends Subsystem {
   // Full speed for the drive. Had issues when tried to slow it
   // down when moving forward and backward.
   public void arcadeDrive(double moveSpeed, double rotateSpeed) {
-    differentialDrive.arcadeDrive(moveSpeed, rotateSpeed);
+    differentialDrive.arcadeDrive(moveSpeed, rotateSpeed * 0.69);
 
   }
 
