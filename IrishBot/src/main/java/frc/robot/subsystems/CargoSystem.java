@@ -28,11 +28,11 @@ public class CargoSystem extends Subsystem {
   // Ran at .7 in testing. Might be able
   // to set to full speed (1, -1)
   public void CargoUp() {
-    CargoWinch.set(.7);
+    CargoWinch.set(1);
   }
 
   public void CargoDown() {
-    CargoWinch.set(-.7);
+    CargoWinch.set(-1);
   }
 
   public void CargoStop() {

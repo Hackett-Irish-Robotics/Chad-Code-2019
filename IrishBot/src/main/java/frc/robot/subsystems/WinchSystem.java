@@ -51,13 +51,13 @@ public class WinchSystem extends Subsystem {
   public void WinchUp() {
     //TalonWinch.set(.7);
     //SparkWinch.set(0.75);
-    VictorWinch.set(.7);
+    VictorWinch.set(.5);
   }
 
   public void WinchDown() {
     //TalonWinch.set(-.7);
     //SparkWinch.set(-0.75);
-    VictorWinch.set(-.7);
+    VictorWinch.set(-1);
   }
 
   public void WinchStop() {
