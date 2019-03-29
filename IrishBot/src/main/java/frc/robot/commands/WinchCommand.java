@@ -22,6 +22,7 @@ public class WinchCommand extends Command {
   @Override
   protected void initialize() {
     Robot.m_winch.WinchStop();
+    Robot.m_winch.initializeCounter();
   }
 
   // Called repeatedly when this Command is scheduled to run
@@ -47,7 +48,8 @@ public class WinchCommand extends Command {
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
-    return false;
+    //Checking for the boolean
+    return Robot.m_winch.isSwitchSet();
   }
 
   // Called once after isFinished returns true.
@@ -61,5 +63,6 @@ public class WinchCommand extends Command {
   // subsystems is scheduled to run
   @Override
   protected void interrupted() {
+    end();
   }
 }

@@ -9,6 +9,9 @@ package frc.robot.subsystems;
 
 
 
+import edu.wpi.first.wpilibj.Counter;
+import edu.wpi.first.wpilibj.DigitalInput;
+
 // The bot might be using a Victor instead. Make sure to check this.
 // It is using a Victor, but this Talon code works since we
 // are just moving the motor backwards and forwards.
@@ -32,6 +35,10 @@ public class WinchSystem extends Subsystem {
   //Spark SparkWinch = null;
   PWMVictorSPX VictorWinch = null;
 
+  // Trying a counter to check limit switch (T||F)
+  DigitalInput LimitSwitch = null;
+  Counter TheCounter = null;
+
   // Trying the PWM version of the Talon
   // However, we might need to use a different controller.
   public WinchSystem() {
@@ -44,8 +51,23 @@ public class WinchSystem extends Subsystem {
 
     VictorWinch = new PWMVictorSPX(RobotMap.HATCH_WINCH_CONTROLLER);
     VictorWinch.enableDeadbandElimination(true);
+
+    // Might need to check this channel.
+    LimitSwitch = new DigitalInput(1);
+    // Setting a counter.
+    TheCounter = new Counter(LimitSwitch);
     
   }
+
+  //---------------
+  public boolean isSwitchSet() {
+    return TheCounter.get() > 0;
+  }
+
+  public void initializeCounter() {
+    TheCounter.reset();
+  }
+  //--------------
 
   // We need to check the speed. This might be too fast.
   public void WinchUp() {
