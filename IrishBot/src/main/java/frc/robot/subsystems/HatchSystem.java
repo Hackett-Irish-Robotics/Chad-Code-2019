@@ -14,6 +14,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 import frc.robot.RobotMap;
 import frc.robot.commands.HatchCommand;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+//comment
 
 public class HatchSystem extends Subsystem {
   // Put methods for controlling this subsystem
