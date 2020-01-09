@@ -14,12 +14,12 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.subsystems.CargoSystem;
+//import frc.robot.subsystems.CargoSystem;
 import frc.robot.subsystems.Drivetrain;
-import frc.robot.subsystems.GrabSystem;
-import frc.robot.subsystems.HatchSystem;
+//import frc.robot.subsystems.GrabSystem;
+//import frc.robot.subsystems.HatchSystem;
 //import frc.robot.subsystems.IntakeSystem;
-import frc.robot.subsystems.WinchSystem;
+//import frc.robot.subsystems.WinchSystem;
 
 
 
@@ -33,7 +33,7 @@ import frc.robot.subsystems.WinchSystem;
 public class Robot extends TimedRobot {
 
     // Adding our Hatch Winch
-    public static WinchSystem m_winch = null;
+    //public static WinchSystem m_winch = null;
 
     // Adding the Drivetrain
     public static Drivetrain m_drivetrain = null;
@@ -42,13 +42,13 @@ public class Robot extends TimedRobot {
     public static Compressor m_compressor = null;
 
     // Adding the Hatch System
-    public static HatchSystem m_hatchsystem = null;
+    //public static HatchSystem m_hatchsystem = null;
 
     // Adding the Grab System
-    public static GrabSystem m_grabsystem = null;
+    //public static GrabSystem m_grabsystem = null;
 
     // Adding the Cargo System
-    public static CargoSystem m_cargosystem = null;
+    //public static CargoSystem m_cargosystem = null;
 
     // If we decide to add the rollers later,
     // we have the system and command code ready.
@@ -72,20 +72,20 @@ public class Robot extends TimedRobot {
     m_drivetrain = new Drivetrain();
 
     // Instantiate the Winch system.
-    m_winch = new WinchSystem();
+    //m_winch = new WinchSystem();
 
     // Instantiate a compressor.
     m_compressor = new Compressor(RobotMap.COMPRESSOR_ID);
     m_compressor.setClosedLoopControl(true);
 
     // Instantiate the Hatch System.
-    m_hatchsystem = new HatchSystem();
+    //m_hatchsystem = new HatchSystem();
 
     // Instantiate the Grab System
-    m_grabsystem = new GrabSystem();
+    //m_grabsystem = new GrabSystem();
 
     // Instantiate the Cargo System
-    m_cargosystem = new CargoSystem();
+    //m_cargosystem = new CargoSystem();
 
     // Instantiate the Intake System in Needed
     //m_intakesystem = new IntakeSystem();
